@@ -14,7 +14,7 @@ build:
   entry_points:
     - ptufile = ptufile.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -33,7 +33,6 @@ requirements:
     - python
     - xarray >=2023.4.0
     - tifffile >=2024.8.30
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
