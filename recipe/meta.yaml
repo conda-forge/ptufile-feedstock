@@ -1,5 +1,5 @@
 {% set name = "ptufile" %}
-{% set version = "2025.2.20" %}
+{% set version = "2025.5.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
-  sha256: b2ae81a9b1eb433be13c34f4a2170671167e5c68355fd6a377affe64489c8eb4
+  sha256: 5dadf6d748ac88211277df45d40d9918ffff2c82c32c4fec471d9304abe81a78
 
 build:
   skip: true  # [py<310]
