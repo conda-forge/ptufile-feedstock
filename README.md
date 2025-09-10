@@ -222,6 +222,3 @@ Feedstock Maintainers
 
 * [@cgohlke](https://github.com/cgohlke/)
 
-
-<!-- dummy commit to enable rerendering -->
-
