@@ -1,5 +1,5 @@
 {% set name = "ptufile" %}
-{% set version = "2025.9.9" %}
+{% set version = "2025.11.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
-  sha256: d0f0bb7d6730ac3661fe5ea3f59e9fd204fd64a6bd8760be80c4768aa3e7559d
+  sha256: dc72d2eb984b4bb75763fbb5ed4b1b3fe4b5b12409d47862f5f6b1b0ec7282bd
 
 build:
   skip: true  # [py<311]
   entry_points:
     - ptufile = ptufile.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
