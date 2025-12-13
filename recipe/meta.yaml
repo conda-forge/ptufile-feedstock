@@ -1,5 +1,5 @@
 {% set name = "ptufile" %}
-{% set version = "2025.11.8" %}
+{% set version = "2025.12.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
-  sha256: dc72d2eb984b4bb75763fbb5ed4b1b3fe4b5b12409d47862f5f6b1b0ec7282bd
+  sha256: e273a32046383301c1fd701d175e884fb122dbdee895e7cce660a8a8ff1d1880
 
 build:
   skip: true  # [py<311]
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://www.cgohlke.com
-  summary: Read and write PicoQuant PTU files
+  summary: Read and write PicoQuant PTU and related files
   license: BSD-3-Clause
   license_file: LICENSE
   dev_url: https://github.com/cgohlke/ptufile
