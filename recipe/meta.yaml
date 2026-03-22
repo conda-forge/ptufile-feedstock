@@ -1,5 +1,5 @@
 {% set name = "ptufile" %}
-{% set version = "2026.2.6" %}
+{% set version = "2026.3.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
-  sha256: 9d0cc5c7a0eb5186638174f3c0a968223b76c63eba1d33503bbe9323d6e4afc4
+  sha256: c9f3c935b0c1d90a0f29443486e66392222a8c3a70d923884b412deb05d86e50
 
 build:
-  skip: true  # [py<311]
+  skip: true  # [py<312]
   entry_points:
     - ptufile = ptufile.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -45,6 +45,10 @@ test:
 about:
   home: https://www.cgohlke.com
   summary: Read and write PicoQuant PTU and related files
+  description: |
+    Ptufile is a Python library to read data and metadata from PicoQuant PTU and 
+    related files (PHU, PCK, PCO, PFS, PUS, PQRES, PQDAT, PQUNI, SPQR, and BIN), 
+    and write TCSPC histograms to T3 image mode PTU files.
   license: BSD-3-Clause
   license_file: LICENSE
   dev_url: https://github.com/cgohlke/ptufile
