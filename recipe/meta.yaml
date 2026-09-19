@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
   sha256: 1f40f32031538a722a6e569a221f65a0c9bad6f33de60ede45041c660575173d
 
 build:
@@ -14,7 +14,7 @@ build:
   entry_points:
     - ptufile = ptufile.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
