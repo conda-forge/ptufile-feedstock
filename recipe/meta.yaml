@@ -1,5 +1,5 @@
 {% set name = "ptufile" %}
-{% set version = "2026.11.5" %}
+{% set version = "2026.11.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/ptufile-{{ version }}.tar.gz
-  sha256: 445ce4aab6e4a057f11762be2ac6092b3a8ffadcb38bbd614203636a262b90c7
+  sha256: 45107439aee1bda4ebc4ca0be39fbf753e064f05b8339286d609019327c31d3f
 
 build:
   skip: true  # [py<312]
